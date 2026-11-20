@@ -140,9 +140,8 @@ a { color: var(--enlace); }
 .contact h2 { font-size: clamp(2.1rem, 4.4vw, 3.1rem); }
 .contact__in > p { margin-top: .9rem; color: var(--gris-claro); font-size: 1.12rem; }
 .contact__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 2rem; }
-.contact__mail { margin-top: 1.25rem !important; font-size: .95rem !important; color: #8FA6BE !important; }
 .btn__icon { width: 1.25em; height: 1.25em; margin-right: .5rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.social { list-style: none; padding: 0; margin-top: 2.25rem; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(.25rem, 2.5vw, 1.75rem); }
+.social { list-style: none; padding: 0; margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(.25rem, 2.5vw, 1.75rem); }
 .social a { display: flex; flex-direction: column; align-items: center; gap: .35rem; padding: .3rem .25rem; border-radius: var(--r-m); color: var(--gris-claro); font-size: .85rem; font-weight: 500; text-decoration: none; transition: color .2s ease; }
 .social a:hover { color: #FFF; }
 .social a:focus-visible { outline: 2px solid var(--cian); outline-offset: 2px; }
