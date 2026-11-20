@@ -14,7 +14,7 @@ Webs a medida para negocios: rápidas, pensadas para el móvil y fáciles de act
 ```
 index.html            la página
 assets/css/estilos.css estilos (colores al principio, en :root)
-assets/img/           capturas, logotipo (logo.webp), favicon e imagen para compartir (og.png)
+assets/img/           capturas, logotipo, mascota, iconos (favicon.png) e imagen para compartir (og.png)
 sitemap.xml           mapa del sitio para Google
 robots.txt            permite el rastreo e indica dónde está el sitemap
 ```
