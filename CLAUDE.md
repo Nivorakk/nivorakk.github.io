@@ -9,7 +9,7 @@ Ofrece webs a medida para negocios. Lema: "Desde Alicante, para toda España" (t
 
 ## Estructura
 - HTML y CSS sin dependencias ni build. GitHub Pages publica la rama `main` desde la raíz.
-- `index.html`: portada, Proyectos, Servicios, Cómo trabajo y Contacto. Incluye datos estructurados `ProfessionalService` (schema.org), etiquetas Open Graph y el script de GoatCounter al final del `body`.
+- `index.html`: portada, Proyectos, Servicios, Cómo trabajo, Paquetes y Contacto. Incluye datos estructurados `ProfessionalService` (schema.org), etiquetas Open Graph y el script de GoatCounter al final del `body`.
 - `assets/css/estilos.css`: colores y tipografías en `:root`.
 - `assets/img/`: capturas en WebP (1200 px de ancho las de ordenador, 600 px las de móvil), `logo.webp` (256 × 256, logotipo de la marca personal: cabeza de búho/lobo con circuitos cian; se usa en la cabecera y en los datos estructurados), `favicon.svg` y `og.png` (1200 × 630, imagen para compartir).
 - `sitemap.xml` y `robots.txt` en la raíz. Si se añade una página o un proyecto, hay que añadirlo también al sitemap.
@@ -27,10 +27,16 @@ Ofrece webs a medida para negocios. Lema: "Desde Alicante, para toda España" (t
 - Visitas: GoatCounter, cuenta `nivorak` (https://nivorak.goatcounter.com).
 - Google Search Console: propiedad "Prefijo de la URL" `https://nivorakk.github.io/`, verificada con el archivo HTML. `sitemap.xml` enviado el 20-11-2026; Google lo vuelve a leer solo cuando cambia.
 
+## Paquetes (sección "Elige tu web")
+- Tarjetas sin precio a la vista; al pulsar se abre un desplegable (`<details name="paquete">`, solo uno abierto a la vez) con precio, qué incluye, mantenimiento y botón de WhatsApp con el paquete en el mensaje.
+- Precios (sin IVA → con IVA 21 %): Web sencilla 300 € → 363 €; Web profesional 800 € → 968 €; Web premium 1.500 € → 1.815 €. Pago único, dominio incluido. Se muestran como "300 € + IVA = 363 €". También están en los datos estructurados (`hasOfferCatalog`, con IVA).
+- Mantenimiento opcional: Básico 30 € (36,30 €/mes), Estándar 60 € (72,60 €/mes), Completo 100 € (121 €/mes). Desde el segundo año, la renovación del dominio va en el mantenimiento. "Cambio pequeño" = texto, foto, precio u horario.
+- El usuario aún no es autónomo; muestra el IVA igualmente. Sin tienda online.
+
 ## Forma de trabajar
 1. Hacer los cambios en una rama nueva, nunca directamente en `main`.
 2. Probar la página en local y revisar capturas a 1366 px y 390 px de ancho: sin errores de consola ni desplazamiento horizontal.
 3. Abrir un PR con el resumen en español. El usuario lo fusiona, o pide que lo fusione Claude.
 
 ## Pendiente
-- Preparar paquetes con precio y un mensaje para contactar con negocios locales.
+- Preparar un mensaje para contactar con negocios.
