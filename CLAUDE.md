@@ -1,7 +1,7 @@
 # Contexto del proyecto
 
 Página de portafolio de **Nivorak** (Joan Cervera): https://nivorakk.github.io
-Ofrece webs a medida para negocios locales de Alicante. El objetivo de la página es conseguir clientes.
+Ofrece webs a medida para negocios. Lema: "Desde Alicante, para toda España" (trabaja en toda España). El objetivo de la página es conseguir clientes.
 
 ## Cómo hablar con el usuario
 - En español, paso a paso y sin tecnicismos: está aprendiendo.
