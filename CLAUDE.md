@@ -24,6 +24,7 @@ Ofrece webs a medida para negocios locales de Alicante. El objetivo de la págin
 - Proyectos: https://nivorakk.github.io/Cafeter-a_Web/ y https://nivorakk.github.io/Drones_web/ (repositorios aparte).
 - Perfiles: https://www.linkedin.com/in/nivorak, https://github.com/Nivorakk, https://www.instagram.com/nivorak.ai/
 - Visitas: GoatCounter, cuenta `nivorak` (https://nivorak.goatcounter.com).
+- Google Search Console: propiedad "Prefijo de la URL" `https://nivorakk.github.io/`, verificada con el archivo HTML. `sitemap.xml` enviado el 20-11-2026; Google lo vuelve a leer solo cuando cambia.
 
 ## Forma de trabajar
 1. Hacer los cambios en una rama nueva, nunca directamente en `main`.
@@ -31,5 +32,4 @@ Ofrece webs a medida para negocios locales de Alicante. El objetivo de la págin
 3. Abrir un PR con el resumen en español. El usuario lo fusiona, o pide que lo fusione Claude.
 
 ## Pendiente
-- Google Search Console (propiedad "Prefijo de la URL" `https://nivorakk.github.io/`, método "Archivo HTML"): el archivo de verificación ya está en la web. Falta que el usuario pulse "Verificar" y enviar `sitemap.xml` en Search Console.
 - Preparar paquetes con precio y un mensaje para contactar con negocios locales.
