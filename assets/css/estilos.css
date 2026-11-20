@@ -141,36 +141,36 @@ a { color: var(--enlace); }
 .contact__in > p { margin-top: .9rem; color: var(--gris-claro); font-size: 1.12rem; }
 .contact__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 2rem; }
 .contact__mail { margin-top: 1.25rem !important; font-size: .95rem !important; color: #8FA6BE !important; }
-.social { list-style: none; padding: 0; margin-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(.5rem, 3vw, 1.5rem); }
-.social a { display: block; padding: .25rem; border-radius: var(--r-m); color: var(--cian-claro); transition: color .2s ease; }
+.btn__icon { width: 1.25em; height: 1.25em; margin-right: .5rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.social { list-style: none; padding: 0; margin-top: 2.25rem; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(.25rem, 2.5vw, 1.75rem); }
+.social a { display: flex; flex-direction: column; align-items: center; gap: .35rem; padding: .3rem .25rem; border-radius: var(--r-m); color: var(--gris-claro); font-size: .85rem; font-weight: 500; text-decoration: none; transition: color .2s ease; }
 .social a:hover { color: #FFF; }
 .social a:focus-visible { outline: 2px solid var(--cian); outline-offset: 2px; }
-.social svg { display: block; width: 58px; height: auto; overflow: visible; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
-.social__body { fill: rgba(34, 211, 238, .1); stroke: var(--cian); }
-.social__icon { stroke: #E6F4FF; stroke-width: 2; }
-.social__hand { fill: currentColor; stroke: none; }
-.social__arm-l { transform-origin: 17px 33px; }
-.social__arm-r { transform-origin: 47px 31px; }
+.social svg { display: block; width: 80px; height: auto; overflow: visible; }
+.m-ext { fill: none; stroke: var(--ext); stroke-width: 7; stroke-linecap: round; }
+.m-mano, .m-pie { fill: var(--ext); }
+.m-brazo-i { transform-origin: 23px 54px; }
+.m-brazo-d { transform-origin: 77px 50px; }
 @media (prefers-reduced-motion: no-preference) {
-  .social__fig, .social__arm-l, .social__arm-r { animation: 5s ease-in-out infinite; animation-delay: calc(var(--i) * .35s); }
-  .social__fig { animation-name: social-bote; }
-  .social__arm-l { animation-name: social-brazo; }
-  .social__arm-r { animation-name: social-saludo; }
-  .social a:hover .social__fig, .social a:focus-visible .social__fig { animation: social-bote .9s ease-in-out infinite; }
-  .social a:hover .social__arm-r, .social a:focus-visible .social__arm-r { animation: social-saludo .9s ease-in-out infinite; }
+  .m-fig, .m-brazo-i, .m-brazo-d { animation: 5s ease-in-out infinite; animation-delay: calc(var(--i) * .35s); }
+  .m-fig { animation-name: m-bote; }
+  .m-brazo-i { animation-name: m-brazo; }
+  .m-brazo-d { animation-name: m-saludo; }
+  .social a:hover .m-fig, .social a:focus-visible .m-fig { animation: m-bote .9s ease-in-out infinite; }
+  .social a:hover .m-brazo-d, .social a:focus-visible .m-brazo-d { animation: m-saludo .9s ease-in-out infinite; }
 }
-@keyframes social-saludo {
+@keyframes m-saludo {
   0%, 40%, 100% { transform: rotate(0); }
-  6%, 18%, 30% { transform: rotate(-30deg); }
-  12%, 24% { transform: rotate(12deg); }
+  6%, 18%, 30% { transform: rotate(-14deg); }
+  12%, 24% { transform: rotate(22deg); }
 }
-@keyframes social-brazo {
+@keyframes m-brazo {
   0%, 40%, 100% { transform: rotate(0); }
-  15%, 25% { transform: rotate(10deg); }
+  15%, 25% { transform: rotate(12deg); }
 }
-@keyframes social-bote {
+@keyframes m-bote {
   0%, 40%, 100% { transform: translateY(0); }
-  10%, 26% { transform: translateY(-3px); }
+  10%, 26% { transform: translateY(-4px); }
   18% { transform: translateY(0); }
 }
 
@@ -190,6 +190,9 @@ a { color: var(--enlace); }
   .top__in { height: 60px; }
   .logo { font-size: 1.1rem; }
   .logo img { width: 38px; height: 38px; border-radius: 9px; }
+  .social { gap: .25rem; }
+  .social svg { width: 54px; }
+  .social a { padding: .3rem .1rem; font-size: .7rem; }
   .hero__lead { font-size: 1.05rem; }
   .hero__circuit { width: 90vw; opacity: .6; }
 }
