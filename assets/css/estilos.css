@@ -141,6 +141,38 @@ a { color: var(--enlace); }
 .contact__in > p { margin-top: .9rem; color: var(--gris-claro); font-size: 1.12rem; }
 .contact__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 2rem; }
 .contact__mail { margin-top: 1.25rem !important; font-size: .95rem !important; color: #8FA6BE !important; }
+.social { list-style: none; padding: 0; margin-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(.5rem, 3vw, 1.5rem); }
+.social a { display: block; padding: .25rem; border-radius: var(--r-m); color: var(--cian-claro); transition: color .2s ease; }
+.social a:hover { color: #FFF; }
+.social a:focus-visible { outline: 2px solid var(--cian); outline-offset: 2px; }
+.social svg { display: block; width: 58px; height: auto; overflow: visible; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.social__body { fill: rgba(34, 211, 238, .1); stroke: var(--cian); }
+.social__icon { stroke: #E6F4FF; stroke-width: 2; }
+.social__hand { fill: currentColor; stroke: none; }
+.social__arm-l { transform-origin: 17px 33px; }
+.social__arm-r { transform-origin: 47px 31px; }
+@media (prefers-reduced-motion: no-preference) {
+  .social__fig, .social__arm-l, .social__arm-r { animation: 5s ease-in-out infinite; animation-delay: calc(var(--i) * .35s); }
+  .social__fig { animation-name: social-bote; }
+  .social__arm-l { animation-name: social-brazo; }
+  .social__arm-r { animation-name: social-saludo; }
+  .social a:hover .social__fig, .social a:focus-visible .social__fig { animation: social-bote .9s ease-in-out infinite; }
+  .social a:hover .social__arm-r, .social a:focus-visible .social__arm-r { animation: social-saludo .9s ease-in-out infinite; }
+}
+@keyframes social-saludo {
+  0%, 40%, 100% { transform: rotate(0); }
+  6%, 18%, 30% { transform: rotate(-30deg); }
+  12%, 24% { transform: rotate(12deg); }
+}
+@keyframes social-brazo {
+  0%, 40%, 100% { transform: rotate(0); }
+  15%, 25% { transform: rotate(10deg); }
+}
+@keyframes social-bote {
+  0%, 40%, 100% { transform: translateY(0); }
+  10%, 26% { transform: translateY(-3px); }
+  18% { transform: translateY(0); }
+}
 
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; max-width: var(--max); margin: 0 auto; padding: 1.5rem var(--gutter) 2rem; font-size: .9rem; color: var(--gris); }
 .foot a { color: var(--gris); }
