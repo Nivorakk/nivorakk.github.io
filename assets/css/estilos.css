@@ -134,9 +134,8 @@ a { color: var(--enlace); }
 /* Paquetes */
 .plans-wrap { max-width: var(--max); margin: 0 auto; }
 .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 1.5rem); align-items: start; }
-.plan { background: var(--niebla); border: 1px solid var(--linea); border-radius: var(--r-l); transition: border-color .2s ease, box-shadow .2s ease; }
-.plan:hover { border-color: #B9C6D6; }
-.plan[open] { background: var(--blanco); border-color: var(--cian); box-shadow: 0 10px 30px rgba(8, 16, 29, .08), 0 0 0 3px rgba(34, 211, 238, .15); }
+.plan { border-radius: var(--r-l); }
+.plan[open] { box-shadow: 0 10px 30px rgba(8, 16, 29, .08), 0 0 0 3px rgba(34, 211, 238, .15); }
 .plan summary { display: grid; gap: .45rem; padding: 1.5rem 1.6rem; cursor: pointer; list-style: none; border-radius: var(--r-l); }
 .plan summary::-webkit-details-marker { display: none; }
 .plan summary:focus-visible { outline: 2px solid var(--enlace); outline-offset: 3px; }
@@ -163,8 +162,65 @@ a { color: var(--enlace); }
 .plan__mtext { font-size: .9rem; color: var(--gris); }
 .plan__small { margin-top: .9rem; font-size: .85rem; color: var(--gris); }
 .plan__cta { width: 100%; margin-top: 1.25rem; }
-@media (max-width: 920px) {
-  .plans { grid-template-columns: 1fr; max-width: 40rem; }
+/* Paquetes: filas con la mascota y tarjetas animadas */
+@property --plan-ang { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.plans { grid-template-columns: 1fr; max-width: 56rem; gap: clamp(1.25rem, 3vw, 1.75rem); }
+.plan-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 1.5rem; align-items: start; }
+.plan { border: 2px solid transparent; transition: transform .25s ease, box-shadow .25s ease;
+  background: linear-gradient(var(--niebla), var(--niebla)) padding-box,
+    conic-gradient(from var(--plan-ang), var(--linea) 0deg 240deg, var(--cian) 300deg, var(--azul) 330deg, var(--linea) 360deg) border-box; }
+.plan:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(8, 16, 29, .1); }
+.plan[open] { background: linear-gradient(var(--blanco), var(--blanco)) padding-box,
+    conic-gradient(from var(--plan-ang), var(--cian) 0deg, var(--azul) 120deg, var(--cian-claro) 240deg, var(--cian) 360deg) border-box; }
+.plan[open]:hover { transform: none; }
+.nv { position: sticky; top: 90px; }
+.nv svg { display: block; width: 100%; height: auto; overflow: visible; }
+.nv-sombra { fill: rgba(8, 16, 29, .14); transform-origin: 191px 490px; }
+.nv-fig { transform-origin: 191px 488px; }
+.nv-brazo { transform-origin: 296px 311px; }
+.nv-bocadillo { transform-origin: 40px 0; }
+.nv-rayas { transform-origin: 390px 190px; }
+.nv-check { transform-origin: -14px 78px; }
+.nv-corona { transform-origin: 191px 60px; }
+.nv-brillo { transform-box: fill-box; transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .plan { animation: plan-luz 6s linear infinite; }
+  .plan-row:nth-child(2) .plan { animation-delay: -2s; }
+  .plan-row:nth-child(3) .plan { animation-delay: -4s; }
+  .nv--saluda .nv-fig { animation: nv-bote 2.4s ease-in-out infinite; }
+  .nv--saluda .nv-brazo { animation: nv-saludo 2.4s ease-in-out infinite; }
+  .nv--saluda .nv-rayas { animation: nv-rayas 2.4s ease-in-out infinite; }
+  .nv--saluda .nv-bocadillo { animation: nv-aparece 2.4s ease-in-out infinite; }
+  .nv--asiente .nv-fig { animation: nv-asiente 2.4s ease-in-out infinite; }
+  .nv--asiente .nv-brazo { animation: nv-levanta 2.4s ease-in-out infinite; }
+  .nv--asiente .nv-check { animation: nv-aparece 2.4s ease-in-out infinite; }
+  .nv--celebra .nv-fig { animation: nv-salto 1.6s ease-in-out infinite; }
+  .nv--celebra .nv-sombra { animation: nv-sombra 1.6s ease-in-out infinite; }
+  .nv--celebra .nv-brazo { animation: nv-agita .4s ease-in-out infinite alternate; }
+  .nv--celebra .nv-corona { animation: nv-corona 1.6s ease-in-out infinite; }
+  .nv--celebra .nv-brillo { animation: nv-brillo 2s ease-in-out infinite; animation-delay: calc(var(--d) * 1s); }
+  @supports (animation-timeline: view()) {
+    .plan-row { animation: plan-entra linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+  }
+}
+@keyframes plan-luz { to { --plan-ang: 360deg; } }
+@keyframes plan-entra { from { opacity: 0; transform: translateY(40px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes nv-bote { 0%, 60%, 100% { transform: translateY(0); } 15%, 40% { transform: translateY(-8px); } 28% { transform: translateY(0); } }
+@keyframes nv-saludo { 0%, 62%, 100% { transform: rotate(0); } 10%, 30%, 50% { transform: rotate(16deg); } 20%, 40% { transform: rotate(-14deg); } }
+@keyframes nv-rayas { 0%, 8%, 58%, 100% { opacity: 0; transform: scale(.6); } 16%, 50% { opacity: 1; transform: scale(1); } }
+@keyframes nv-aparece { 0%, 4%, 70%, 100% { transform: scale(0); opacity: 0; } 12%, 60% { transform: scale(1); opacity: 1; } }
+@keyframes nv-asiente { 0%, 60%, 100% { transform: rotate(0); } 15% { transform: rotate(-4deg) translateY(-4px); } 30% { transform: rotate(3deg); } 45% { transform: rotate(-2deg) translateY(-2px); } }
+@keyframes nv-levanta { 0%, 60%, 100% { transform: rotate(0); } 20%, 45% { transform: rotate(10deg); } }
+@keyframes nv-salto { 0%, 100% { transform: translateY(0); } 35%, 55% { transform: translateY(-34px); } 80% { transform: translateY(0) scaleY(.97); } }
+@keyframes nv-sombra { 0%, 100% { transform: scale(1); opacity: 1; } 35%, 55% { transform: scale(.7); opacity: .6; } }
+@keyframes nv-agita { from { transform: rotate(14deg); } to { transform: rotate(-12deg); } }
+@keyframes nv-corona { 0%, 100% { transform: rotate(0) translateY(0); } 40% { transform: rotate(-6deg) translateY(-8px); } 60% { transform: rotate(6deg) translateY(-8px); } }
+@keyframes nv-brillo { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); opacity: 1; } }
+@media (max-width: 720px) {
+  .plan-row { grid-template-columns: minmax(0, 1fr); }
+  .nv { position: absolute; top: -40px; right: -2px; width: 100px; z-index: 1; pointer-events: none; }
+  .plan summary { padding-right: 6.5rem; }
+  .nv-bocadillo { display: none; }
 }
 
 /* Contacto */

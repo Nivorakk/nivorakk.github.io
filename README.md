@@ -1,8 +1,8 @@
-# Nivorak: diseño y desarrollo web en Alicante
+# Nivorak: diseño web a medida, desde Alicante para toda España
 
 Página principal de mi portafolio: **https://nivorakk.github.io**
 
-Webs a medida para negocios locales: rápidas, pensadas para el móvil y fáciles de actualizar.
+Webs a medida para negocios: rápidas, pensadas para el móvil y fáciles de actualizar.
 
 ## Proyectos
 
@@ -14,7 +14,7 @@ Webs a medida para negocios locales: rápidas, pensadas para el móvil y fácile
 ```
 index.html            la página
 assets/css/estilos.css estilos (colores al principio, en :root)
-assets/img/           capturas, favicon e imagen para compartir (og.png)
+assets/img/           capturas, logotipo (logo.webp), favicon e imagen para compartir (og.png)
 sitemap.xml           mapa del sitio para Google
 robots.txt            permite el rastreo e indica dónde está el sitemap
 ```
