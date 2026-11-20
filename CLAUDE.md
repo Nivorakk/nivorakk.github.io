@@ -23,6 +23,7 @@ Ofrece webs a medida para negocios locales de Alicante. El objetivo de la págin
 ## Enlaces
 - Proyectos: https://nivorakk.github.io/Cafeter-a_Web/ y https://nivorakk.github.io/Drones_web/ (repositorios aparte).
 - Perfiles: https://www.linkedin.com/in/nivorak, https://github.com/Nivorakk, https://www.instagram.com/nivorak.ai/
+- Contacto: WhatsApp 648 53 09 54 (enlace `https://wa.me/34648530954` con mensaje ya escrito; es el botón principal de Contacto) y email nivorak.ai@outlook.es. En Contacto, cada uno sale como un muñequito animado que saluda (el logotipo es el cuerpo, con cara, brazos y piernas), dibujado en SVG dentro de `index.html`; cada muñequito es un enlace a su red. El teléfono y el email no se muestran escritos en la página ni el teléfono va en los datos estructurados (decisión del usuario).
 - Visitas: GoatCounter, cuenta `nivorak` (https://nivorak.goatcounter.com).
 - Google Search Console: propiedad "Prefijo de la URL" `https://nivorakk.github.io/`, verificada con el archivo HTML. `sitemap.xml` enviado el 20-11-2026; Google lo vuelve a leer solo cuando cambia.
 
