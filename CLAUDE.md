@@ -13,6 +13,7 @@ Ofrece webs a medida para negocios locales de Alicante. El objetivo de la págin
 - `assets/css/estilos.css`: colores y tipografías en `:root`.
 - `assets/img/`: capturas en WebP (1200 px de ancho las de ordenador, 600 px las de móvil), `favicon.svg` y `og.png` (1200 × 630, imagen para compartir).
 - `sitemap.xml` y `robots.txt` en la raíz. Si se añade una página o un proyecto, hay que añadirlo también al sitemap.
+- `google644f0caf98e39005.html` en la raíz: verificación de Google Search Console. No borrarlo nunca ni añadirlo al sitemap.
 
 ## Marca
 - Colores: azul noche `#08101D` y cian `#22D3EE` / `#67E8F9`. Fondo claro de secciones `#F4F7FA`.
@@ -30,5 +31,5 @@ Ofrece webs a medida para negocios locales de Alicante. El objetivo de la págin
 3. Abrir un PR con el resumen en español. El usuario lo fusiona, o pide que lo fusione Claude.
 
 ## Pendiente
-- Verificar la web en Google Search Console: propiedad "Prefijo de la URL" `https://nivorakk.github.io/`, método "Archivo HTML". El usuario facilita el nombre del archivo (`google….html`); su contenido es `google-site-verification: <nombre del archivo>`. Después, enviar `sitemap.xml` en Search Console.
+- Google Search Console (propiedad "Prefijo de la URL" `https://nivorakk.github.io/`, método "Archivo HTML"): el archivo de verificación ya está en la web. Falta que el usuario pulse "Verificar" y enviar `sitemap.xml` en Search Console.
 - Preparar paquetes con precio y un mensaje para contactar con negocios locales.
